@@ -1,20 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import CoreLayout from './layout'
-import AppRouter from './routes'
+import App from './App'
 
 const __DEV__ = true
 
 const MOUNT_NODE = document.getElementById('app')
 
-const App = () => (
-    <CoreLayout>
-        <AppRouter />
-    </CoreLayout>
-)
-
 let render = () => {
-
     ReactDOM.render(
         <App />,
         MOUNT_NODE

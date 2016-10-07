@@ -15,7 +15,7 @@ const webpackConfig = {
     module: {}
 }
 
-webpackConfig.entry = path.resolve(appDir, 'index.js')
+webpackConfig.entry = path.resolve(appDir, 'main.js')
 
 webpackConfig.output = {
     filename: "app.js",
@@ -41,6 +41,10 @@ if (__DEV__) {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     )
+    webpackConfig.devServer = {
+        inline: true
+
+    }
 } else if (__PROD__) {
     webpackConfig.plugins.push(
         new webpack.optimize.OccurrenceOrderPlugin(),

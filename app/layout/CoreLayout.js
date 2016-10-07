@@ -1,4 +1,5 @@
 import React from 'react'
+import Nav from '../components/Nav'
 import '../styles/core.scss'
 
 export class CoreLayout extends React.Component {
@@ -9,7 +10,10 @@ export class CoreLayout extends React.Component {
         const {children} = this.props
         return (
             <div className="page-wrapper">
-                {children}
+                <header className="page-header">
+                    <Nav />
+                </header>
+                <div className="page-body">{children}</div>
             </div>
         )
     }
