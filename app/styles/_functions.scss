@@ -1,0 +1,11 @@
+@function get_rgb_code($color) {
+  @return #{"#{red($color)}, #{green($color)}, #{blue($color)}"}
+}
+
+@function get_rgb($color) {
+  @return #{"rgb(#{get_rgb_code($color)})"}
+}
+
+@function get_rgba($color, $opacity) {
+  @return #{"rgba(#{get_rgb_code($color)}, #{$opacity})"}
+}

@@ -1,0 +1,9 @@
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &__item {
+    align-self: center;
+    flex: 0 0 50%;
+  }
+}

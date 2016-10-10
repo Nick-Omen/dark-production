@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.nav {
+  &__link {
+    color: $color-text;
+    text-decoration: none;
+    padding: $spacer/2 $spacer;
+    transition: color $time-animation--fast linear;
+    &.is-active,
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

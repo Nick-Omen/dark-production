@@ -1,0 +1,11 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.app {
+  min-height: 100%;
+  background: $color-dark;
+  transition: opacity $time-animation*2 ease;
+  &.loaded {
+    opacity: 1 !important;
+  }
+}

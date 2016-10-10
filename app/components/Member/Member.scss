@@ -1,0 +1,116 @@
+@import "../../styles/variables";
+
+.member {
+  margin: 0 auto $spacer*2;
+  width: 280px;
+
+  &__photo-container {
+    position: relative;
+    margin-bottom: $spacer/2;
+    height: 180px;
+    text-align: center;
+  }
+  &__photo {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    &.has-photo {
+      border-radius: 90px;
+      box-shadow: inset 0 0 0 2px $color-dark, 0 0 0 2px get_rgba($color-main, .54);
+    }
+  }
+
+  &__nick-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      background: $color-text;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+    }
+  }
+  &__name {
+    margin: 0 0 $spacer/4;
+  }
+
+  &__email {
+    color: $color-accent;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 $color-accent;
+
+    &:before {
+      content: '<';
+    }
+    &:after {
+      content: '>';
+      text-align: right;
+    }
+    &:before,
+    &:after {
+      display: inline-block;
+      width: 20px;
+      opacity: 0;
+      transition: opacity $time-animation--fast ease-in;
+      vertical-align: text-bottom;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__hr {
+    max-width: 180px;
+    margin: $spacer 0;
+  }
+
+  &__location {
+    font-size: .875em;
+    color: $color-secondary-text;
+
+    &-item {
+      &:after {
+        content: ', ';
+      }
+      &:last-of-type:after {
+        content: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-main;
+    text-decoration: none;
+    transition: opacity $time-animation--fast ease;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  &__site-link {
+    color: $color-text;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__links {
+    text-align: center;
+    padding-top: $spacer/2;
+  }
+}

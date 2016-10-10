@@ -1,4 +1,7 @@
 @import '~normalize.css/normalize';
+@import "variables";
+@import "mixins";
+@import "common";
 
 html {
   box-sizing: border-box;
@@ -9,11 +12,35 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  color: $color-text;
   font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-header {
+  padding: $spacer;
+  display: flex;
+  flex-wrap: nowrap;
+  &__nav,
+  &__logo {
+    flex: 0 0 auto;
+  }
+}
+
+.page-body {
+  padding: $spacer;
+}
+
+.spacer {
+  flex: 1 0 0;
 }

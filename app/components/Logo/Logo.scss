@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.logo {
+  margin: 0 $spacer;
+  height: 34px;
+  line-height: 34px;
+  font-size: 20px;
+  color: $color-accent;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
