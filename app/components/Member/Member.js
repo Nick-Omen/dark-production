@@ -16,10 +16,10 @@ export class Member extends Component {
                 {member.name && <h3 className="member__name">{member.name}</h3>}
                 {member.email && <a className="member__email" href={'mailto:' + member.email}>{member.email}</a>}
                 <hr className="member__hr"/>
-                {member.location && <span className="member__location">
+                {member.location && <div className="member__location">
                     {member.location.country && <span className="member__location-item">{member.location.country}</span>}
                     {member.location.city && <span className="member__location-item">{member.location.city}</span>}
-                </span>}
+                </div>}
                 <div className="member__links">
                     {member.personalUrl && <a target="_blank" className="member__link" href={member.personalUrl}>{'Site'}</a>}
                     {member.personalUrl && ' | '}

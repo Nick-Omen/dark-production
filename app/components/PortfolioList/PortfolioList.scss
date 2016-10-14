@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.portfolio-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.slider-controls {
+  position: relative;
+  text-align: center;
+
+  &__button {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    &.prev {
+      right: 100%;
+    }
+    &.next {
+      left: 100%;
+    }
+  }
+
+  &__dots {
+    display: inline-block;
+    padding: 0;
+  }
+  &__dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      top: 50%;
+      left: 50%;
+      margin-top: -2px;
+      margin-left: -2px;
+      background: $color-white;
+      transition: transform $time-animation--fast ease-in-out, margin $time-animation--fast linear, color $time-animation--fast linear;
+    }
+    &:hover:before,
+    &.active:before {
+      transform: scale(2);
+      background: $color-accent;
+      transition: transform $time-animation--fast linear;
+    }
+  }
+}
